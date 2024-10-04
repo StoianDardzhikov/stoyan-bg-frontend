@@ -13,7 +13,7 @@ RUN npm run build
 FROM nginx:alpine
 
 # Copy config nginx
-COPY --from=build nginx.conf /etc/nginx/conf.d/default.conf
+COPY --from=build /app/nginx.conf /etc/nginx/conf.d/default.conf
 
 WORKDIR /usr/share/nginx/html
 
