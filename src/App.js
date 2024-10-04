@@ -5,13 +5,11 @@ import AboutMeLanding from "./AboutMeLanding";
 
 function App() {
   return (
-      <body>
-        <div className="App">
-            <Menu></Menu>
+    <div className="App">
+        <Menu></Menu>
             <Landing></Landing>
             <AboutMeLanding></AboutMeLanding>
-        </div>
-      </body>
+    </div>
   );
 }
 
