@@ -1,0 +1,222 @@
+@font-face {
+    font-family: 'Baloo2'; /* Custom name for the font */
+    src: url('./fonts/Baloo2-Regular.ttf');
+
+}
+
+body {
+    height: 100vh; /* Ensure the body takes up the full viewport height */
+    background: linear-gradient(to bottom right, #3E155E, #150720); /* Define the gradient direction */
+    background-repeat: no-repeat; /* Prevent the background from repeating */
+    background-attachment: fixed; /* Fix the background so it doesn't scroll */
+    background-size: cover; /* Make sure the background covers the entire viewport */
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+* {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.menu {
+    z-index: 2;
+    position: fixed;
+    height: 7vh;
+    width: 100%;
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+}
+
+.menu-right {
+    margin-left: auto;
+}
+
+.menu-button {
+    background-color: transparent;
+    color: white;
+    font-family: 'Baloo2', sans-serif !important;
+    font-size: 1.5vw;
+    position: relative;
+    border: none; /* Remove default border */
+    padding: 1vh 2vw; /* Padding for the buttons */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    margin: 0 1vw;
+}
+
+
+.menu-button:hover {
+    transition: color 0.3s; /* Transition effect for hover */
+    color: #FF6F6F; /* Change text color on hover */
+}
+
+.underline {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px; /* Height of the underline */
+    width: 0; /* Start with no width */
+    background-color: #FF6F6F; /* Color of the underline */
+    transition: width 0.3s ease; /* Animate width and position */
+}
+
+.menu-button:hover .underline {
+    width: 80%; /* Expand width to full on hover */
+}
+
+:root {
+    --landing-anim-time: 2s;
+}
+
+.stoyan {
+    position: relative;
+    margin-left: 0;
+    padding-left: 25vw;
+    padding-top: 16vh;
+    overflow: hidden;
+    height: 23vh;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.stoyan-text {
+    color: white;
+    font-size: 5vw;
+    text-shadow: #6FFFD6 3px 2px;
+}
+
+@keyframes stoyan-line-ease-in {
+    from {width: 0}
+    to {width: 50vw;}
+}
+
+.stoyan-line {
+    height: 5vw;
+    width: 50vw;
+    margin-top: 4.5vw;
+    margin-left: 2vw;
+    background-color: #6FFFD6; /* Color of the underline */
+    animation-name: stoyan-line-ease-in;
+    animation-duration: var(--landing-anim-time);
+}
+
+.dard {
+    position: relative;
+    margin-left: 0;
+    overflow: hidden;
+    height: 18vh;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.dard-text{
+    margin-top: 0;
+    margin-left: 2vw;
+    color: white;
+    font-size: 5vw;
+    text-shadow: #FF6F6F 3px 2px;
+}
+
+@keyframes dard-line-ease-in {
+    from {width: 0}
+    to {width: 34vw;}
+}
+
+.dard-line {
+    margin-top: 1.4vw;
+    position: relative;
+    height: 5vw;
+    width: 34vw;
+    background-color: #FF6F6F; /* Color of the underline */
+    animation-name: dard-line-ease-in;
+    animation-duration: var(--landing-anim-time);
+}
+
+.moto {
+    position: relative;
+    margin-left: 0;
+    padding-left: 15vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.moto-text {
+    color: white;
+    margin-top: 0.2vw;
+    margin-right: 1vw;
+    font-size: 2vw;
+    text-shadow: #FFC4A3 2px 1px;
+}
+
+@keyframes moto-line-ease-in {
+    from {width: 0}
+    to {width: 25vw;}
+}
+
+.moto-line {
+    position: relative;
+    height: 4vh;
+    margin-top: 0.5vw;
+    width: 25vw;
+    background-color: #FFC4A3; /* Color of the underline */
+    animation-name: moto-line-ease-in;
+    animation-duration: var(--landing-anim-time);
+}
+
+.cta {
+    display: flex;
+    margin-top: auto;
+    margin-bottom: 3vh;
+    flex-direction: column;
+    align-items: center;
+}
+
+@keyframes cta-image-jump {
+    25% {transform: translateY(1vh)}
+    50% {transform: translateY(0vh)}
+    75% {transform: translateY(1vh)}
+    100% {transform: translateY(0vh)}
+}
+
+
+.cta-img{
+    width: 1.5vw;
+    height: 1.5vw;
+    animation-delay: var(--landing-anim-time);
+    animation-duration: 2s;
+    animation-name: cta-image-jump;
+}
+
+.cta-text {
+    color: white;
+    margin-top: 0.2vw;
+    font-size: 1vw;
+}
+
+.landing {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
+
+.aboutMeLanding {
+    height: 100vh;
+    overflow: hidden;
+
+}
+
+.section {
+    height: 33.33vh;
+    padding: 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
