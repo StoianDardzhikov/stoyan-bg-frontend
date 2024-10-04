@@ -25,8 +25,8 @@ pipeline {
             steps {
                 script {
                     // Stop and remove any existing container named spring-boot-app
-                    sh 'docker stop myapp || true'
-                    sh 'docker rm myapp || true'
+                    sh 'docker stop stoyan-bg-frontend || true'
+                    sh 'docker rm stoyan-bg-frontend || true'
 
                     // Run the new Docker container, mapping port 8080 of the container to port 8081 on the host
                     docker.image("${env.DOCKER_IMAGE}:${env.BUILD_ID}").run('-p 8081:80 --name stoyan-bg-frontend')
